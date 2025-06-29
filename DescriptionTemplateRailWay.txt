@@ -1,37 +1,56 @@
+
 # Deploy and Host WhatsApp AI Assistant Bot on Railway
 
-WhatsApp AI Assistant Bot is a Node.js-based WhatsApp bot that integrates with OpenAI's Assistant API using BuilderBot technology. It enables automated, intelligent conversations on WhatsApp, configurable via your own OpenAI Assistant and environment variables.
+WhatsApp AI Assistant Bot es un bot de WhatsApp basado en Node.js que integra la API de OpenAI (incluyendo GPT-4o Vision) usando la tecnología BuilderBot. Permite conversaciones automatizadas e inteligentes, análisis de imágenes, transcripción de audios y flujos personalizados, todo configurable mediante variables de entorno y asistentes propios de OpenAI.
 
-## About Hosting WhatsApp AI Assistant Bot
 
-Hosting WhatsApp AI Assistant Bot on Railway allows you to deploy a production-ready conversational bot for WhatsApp with minimal setup. The bot supports custom flows, intelligent responses, and can be tailored to your business or personal needs by adjusting environment variables and assistant configuration. Railway handles the infrastructure, so you can focus on building and improving your bot logic, not on server management.
+## Funcionalidades principales
 
-## Why Deploy WhatsApp AI Assistant Bot on Railway?
+- Responde automáticamente mensajes de texto, imágenes y audios en WhatsApp.
+- Analiza imágenes recibidas usando OpenAI Vision (GPT-4o):
+  - Envía la imagen a OpenAI y responde con una descripción y el texto extraído (OCR).
+- Transcribe mensajes de voz a texto usando Whisper/OpenAI.
+- Permite flujos personalizados para bienvenida, reconexión, mensajes de voz e imágenes.
+- Soporta respuestas irónicas/sarcásticas para pruebas (prompt configurable).
+- Maneja errores y reportes automáticos a grupos de WhatsApp.
+- Sube imágenes a Imgur temporalmente para análisis seguro.
+- Configuración sencilla por variables de entorno (.env).
 
-Railway is a singular platform to deploy your infrastructure stack. Railway will host your infrastructure so you don't have to deal with configuration, while allowing you to vertically and horizontally scale it.
 
-By deploying WhatsApp AI Assistant Bot on Railway, you are one step closer to supporting a complete full-stack application with minimal burden. Host your servers, databases, AI agents, and more on Railway.
+## ¿Por qué desplegar WhatsApp AI Assistant Bot en Railway?
 
-## Common Use Cases
+Railway permite desplegar bots de WhatsApp listos para producción con mínima configuración. Olvídate de la infraestructura y enfócate en la lógica de tu bot. Railway escala automáticamente y soporta servidores, bases de datos y agentes de IA.
 
-- Automated customer support on WhatsApp
-- Lead generation and qualification via chat
-- Sending intelligent notifications or reminders to users
 
-## Dependencies for WhatsApp AI Assistant Bot Hosting
+## Casos de uso comunes
 
-- Node.js (managed by Railway)
-- pnpm (for dependency management)
-- OpenAI API key (for assistant integration)
+- Soporte automático a clientes en WhatsApp
+- Generación y calificación de leads vía chat
+- Notificaciones inteligentes y recordatorios
+- Análisis de imágenes y OCR en WhatsApp
+- Transcripción de notas de voz
 
-### Deployment Dependencies
 
-- [BuilderBot documentation](https://builderbot.vercel.app/)
-- [OpenAI API](https://platform.openai.com/)
+## Dependencias principales
+
+- Node.js (gestionado por Railway)
+- pnpm (para gestión de dependencias)
+- Clave de API de OpenAI (para integración de asistentes y visión)
+- Client-ID de Imgur (para subir imágenes temporalmente)
+
+
+### Recursos y documentación
+
+- [Documentación de BuilderBot](https://builderbot.vercel.app/)
+- [API de OpenAI](https://platform.openai.com/)
+- [API de Imgur](https://apidocs.imgur.com/)
 
 ---
 
-## Contact
+
+---
+
+## Contacto
 
 Desarrollado por Pereyra Hugo - pereyrahugor@gmail.com
 Sitio web: https://clientesneurolinks.com/
