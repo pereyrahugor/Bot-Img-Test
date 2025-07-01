@@ -5,7 +5,7 @@ import { ErrorReporter } from "../utils/errorReporter";
 
 import axios from "axios";
 import { OpenAI } from "openai";
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY_IMG });
 
 const IMGUR_CLIENT_ID = process.env.IMGUR_CLIENT_ID;
 

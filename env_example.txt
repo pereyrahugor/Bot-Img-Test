@@ -1,0 +1,16 @@
+ASSISTANT_ID=""
+ASSISTANT_ID_IMG=""
+OPENAI_API_KEY_IMG=""
+OPENAI_API_KEY=""
+ID_GRUPO_RESUMEN=""
+msjCierre="Msj de cierre y envio de reporte. 😊 - TEST"
+msjSeguimiento1="MSJ 1 de Seguimiento.
+(Este es un mensaje de seguimiento 😉)"
+msjSeguimiento2="MSJ 2 de seguimiento, 
+Sigo aquí para ayudarte a optimizar ventas"
+msjSeguimiento3="Msj 3 de seguimiento.
+
+Aquí estoy para potenciar tus ventas, hablemos que puedo hacer por tu negocio."
+timeOutCierre="7"
+timeOutSeguimiento2="45"
+timeOutSeguimiento3="120"
