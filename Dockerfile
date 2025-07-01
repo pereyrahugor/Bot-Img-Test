@@ -33,30 +33,9 @@ WORKDIR /app
 
 
 # --- ENVIRONMENT VARIABLES ---
-ARG ASSISTANT_ID=asst_AdoKqgHqMiqfXiVkOPtzvfrW
-ARG OPENAI_API_KEY=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
-ARG ID_GRUPO_RESUMEN=
-ARG IMGUR_CLIENT_ID=dbe415c6bbb950d
-ARG msjCierre=MsjCierre
-ARG msjSeguimiento1=Seguimiento1
-ARG msjSeguimiento2=Seguimiento2
-ARG msjSeguimiento3=Seguimiento3
-ARG timeOutCierre=7
-ARG timeOutSeguimiento2=45
-ARG timeOutSeguimiento3=120
+ARG IMGUR_CLIENT_ID
 ARG PORT=3000
-
-ENV ASSISTANT_ID=${ASSISTANT_ID}
-ENV OPENAI_API_KEY=${OPENAI_API_KEY}
-ENV ID_GRUPO_RESUMEN=${ID_GRUPO_RESUMEN}
-ENV IMGUR_CLIENT_ID=${IMGUR_CLIENT_ID}
-ENV msjCierre=${msjCierre}
-ENV msjSeguimiento1=${msjSeguimiento1}
-ENV msjSeguimiento2=${msjSeguimiento2}
-ENV msjSeguimiento3=${msjSeguimiento3}
-ENV timeOutCierre=${timeOutCierre}
-ENV timeOutSeguimiento2=${timeOutSeguimiento2}
-ENV timeOutSeguimiento3=${timeOutSeguimiento3}
+ENV IMGUR_CLIENT_ID=dbe415c6bbb950d
 ENV PORT=${PORT}
 
 EXPOSE $PORT

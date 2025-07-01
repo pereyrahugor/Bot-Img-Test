@@ -89,7 +89,15 @@ const welcomeFlowImg = addKeyword(EVENTS.MEDIA).addAnswer(
       // Obtener el mensaje de respuesta
       const messages = await openai.beta.threads.messages.list(thread.id);
       const resultMsg = messages.data.find((msg) => msg.role === "assistant");
-      const result = resultMsg?.content?.[0]?.text?.value || "No se obtuvo respuesta del asistente.";
+      let result = "No se obtuvo respuesta del asistente.";
+      if (resultMsg && Array.isArray(resultMsg.content)) {
+        const textBlock = resultMsg.content.find(
+          (block: any) => block.type === "text" && typeof (block as any).text?.value === "string"
+        );
+        if (textBlock && (textBlock as any).text && typeof (textBlock as any).text.value === "string") {
+          result = (textBlock as any).text.value;
+        }
+      }
       await flowDynamic(result);
 
       // Eliminar el archivo temporal
