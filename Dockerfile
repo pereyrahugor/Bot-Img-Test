@@ -16,12 +16,14 @@ COPY package*.json *-lock.yaml ./
 
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends python3 make g++ git ca-certificates \
+    && apt-get install -y --no-install-recommends python3 make g++ git ca-certificates poppler-utils \
     && update-ca-certificates \
     && pnpm install && pnpm run build \
     && apt-get remove -y python3 make g++ git \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
+# Instala poppler-utils (pdftoppm) en la imagen final
+RUN apt-get update && apt-get install -y --no-install-recommends poppler-utils && rm -rf /var/lib/apt/lists/*
 
 
 
